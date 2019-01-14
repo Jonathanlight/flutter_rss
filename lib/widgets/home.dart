@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'package:flutter_rss/widgets/loading.dart';
 import 'package:flutter_rss/widgets/list.dart';
+import 'package:flutter_rss/widgets/grille.dart';
 
 
 class Home extends StatefulWidget {
@@ -46,6 +47,7 @@ class _HomeState extends State<Home> {
         return new List(feed);
       } else {
         // Grille
+        return new Grille(feed);
       }
     }
   }

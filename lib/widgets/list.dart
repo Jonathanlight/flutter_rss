@@ -5,8 +5,6 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'package:flutter_rss/widgets/loading.dart';
 import 'package:flutter_rss/models/dateConverter.dart';
-import 'package:html/parser.dart' show parse;
-import 'package:html/dom.dart';
 
 class List extends StatefulWidget {
   RssFeed feed;
