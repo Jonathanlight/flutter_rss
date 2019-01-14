@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:webfeed/webfeed.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_rss/models/dateConverter.dart';
+import 'package:flutter_rss/widgets/detail.dart';
 
 class Grille extends StatefulWidget {
   RssFeed feed;
@@ -25,7 +26,14 @@ class _GrilleState extends State<Grille> {
           RssItem item = widget.feed.items[i];
           return new InkWell(
             onTap: () {
-
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return new Detail(item);
+                    }
+                  )
+                );
             },
             child: new Card(
               elevation: 10.0,
