@@ -32,6 +32,17 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(widget.title),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.refresh),
+            onPressed: () {
+              setState(() {
+                feed = null;
+                parse();
+              });
+            },
+          )
+        ],
       ),
       body: mainBody(),
     );
