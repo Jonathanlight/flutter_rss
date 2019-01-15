@@ -6,7 +6,7 @@ import 'dart:async';
 import 'package:flutter_rss/widgets/loading.dart';
 import 'package:flutter_rss/models/dateConverter.dart';
 
-class Detail extends StatefulWidget {
+class Detail extends StatelessWidget {
   RssItem item;
 
   Detail(RssItem feed) {
