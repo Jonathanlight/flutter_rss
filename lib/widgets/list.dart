@@ -4,6 +4,7 @@ import 'package:webfeed/webfeed.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'package:flutter_rss/widgets/loading.dart';
+import 'package:flutter_rss/widgets/detail.dart';
 import 'package:flutter_rss/models/dateConverter.dart';
 
 class List extends StatefulWidget {
@@ -32,7 +33,14 @@ class _ListState extends State<List> {
             elevation: 10.0,
             child: new InkWell(
               onTap: () {
-
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return new Detail(item);
+                    }
+                  )
+                );
               },
               child: new Column(
                 children: <Widget>[

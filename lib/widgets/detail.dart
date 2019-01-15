@@ -20,7 +20,7 @@ class Detail extends StatefulWidget {
         centerTitle: true,
         title: Text("Show Title"),
       ),
-      body: new Center(
+      body: new SingleChildScrollView(
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
