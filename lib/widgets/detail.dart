@@ -24,17 +24,21 @@ class Detail extends StatefulWidget {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
+            padding(),
             new Text(item.author ?? ''),
+            padding(),
             new Text(
               new DateConverter().converterDate(item.pubDate ?? ''), 
               style: TextStyle(
                 color: Colors.red
               ),
             ),
+            padding(),
             new Text(
               item.title ?? '', 
               textAlign: TextAlign.center,
             ),
+            padding(),
             new Card(
               elevation: 7.5,
               child: new Container(
@@ -44,9 +48,18 @@ class Detail extends StatefulWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-            )
+            ),
+            padding(),
           ],
         ),
+      ),
+    );
+  }
+
+  Padding padding() {
+    return new Padding(
+      padding: EdgeInsets.only(
+        top: 10.0,
       ),
     );
   }
