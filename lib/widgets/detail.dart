@@ -9,7 +9,7 @@ import 'package:flutter_rss/models/dateConverter.dart';
 class Detail extends StatelessWidget {
   RssItem item;
 
-  Detail(RssItem feed) {
+  Detail(RssItem item) {
     this.item = item;
   }
 

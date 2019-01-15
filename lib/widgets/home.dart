@@ -68,7 +68,6 @@ class _HomeState extends State<Home> {
     if (recu != null) {
       setState(() {
         feed = recu;
-        print(feed.items.length);
         feed.items.forEach((feedItem) {
           RssItem item = feedItem;
         });
